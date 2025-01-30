@@ -2,7 +2,13 @@
 name = "jesus_menu"
 version = "0.1.0"
 edition = "2021"
+authors = ["Thomas Holland"]
+description = "Jesus College Cambridge meal menu viewer"
 
 [dependencies]
 chrono = "0.4"
 webbrowser = "0.8"
+
+[package.metadata.bundle]
+name = "Jesus Menu"
+identifier = "com.thomasholland.jesusmenu"
