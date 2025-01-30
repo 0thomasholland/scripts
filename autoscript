@@ -1,0 +1,20 @@
+#!/bin/sh
+if [ $# -eq 0 ]; then
+    echo "Error: Please provide a filename"
+    echo "Usage: autoscript <filename>"
+    exit 1
+fi
+
+filename="$1"
+bin_dir="~/bin" #bin directory, make sure this is in path
+script_path="$bin_dir/$filename"
+
+cat > "$script_path" << 'EOL'
+#!/bin/sh
+
+# Your script content goes here
+
+EOL
+
+chmod +x "$script_path"
+nvim "$script_path"
